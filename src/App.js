@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -11,6 +11,10 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './components/Login';
 import SearchedHouse from './components/SearchedHouse';
 import axios from 'axios';
+import Enquiry from './components/Enquiry';
+import EnquiriesList from './components/EnquriesList';
+// import Enquiry1 from './components/Enquiry1';
+// import Query from './components/Query';
 
 
 function App() {
@@ -60,7 +64,11 @@ useEffect( () =>{
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<SignUp/>} />
           <Route path="/searchedhouse" element={<SearchedHouse housesData = {housesArray}/>} />
-         
+          {/* <Route path="/enquiry" element={<Enquiry1/>} /> */}
+          {/* <Route path="/query" element={<Query/>} /> */}
+          <Route path="/enquiry" element={<Enquiry/>} />
+          <Route path="/enquiries" element={<EnquiriesList/>} />
+          
         </Routes>
        
 

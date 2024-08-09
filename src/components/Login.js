@@ -114,10 +114,14 @@ const  Login= () => {
                 let data=response.data;
                 console.log(data);
                 if(data.email){
+                    localStorage.setItem('role',data.role)
                     localStorage.setItem('name',data.name);
                     localStorage.setItem('email',data.email);
                     localStorage.setItem('loginStatus',true)
-                    navigate('/');
+                    if(data.role==="customer")
+                        navigate('/');
+                    else if(data.role==="realtor")
+                        navigate('/enquiries');
                 }
                 else{
                     localStorage.clear();

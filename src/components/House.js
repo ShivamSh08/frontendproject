@@ -1,3 +1,5 @@
+import Enquiry from "./Enquiry";
+
 const House = (props) => {
 
 
@@ -26,6 +28,7 @@ const House = (props) => {
                     </div>      
                     <div className="col-sm-6">
                                 {props.houseInfo.description}
+                                {localStorage.getItem("name") && <Enquiry/>}
                     </div>
                 </div>
                 </>
